@@ -11,6 +11,14 @@
   >
     <i-tabler name="align-left" class="icon-20 d-flex" />
   </button>
+  } @if(showToggle){
+  <button
+    mat-icon-button
+    (click)="toggleMobileNav.emit()"
+    class="d-block d-lg-none"
+  >
+    <i-tabler name="align-left" class="icon-20 d-flex"></i-tabler>
+  </button>
   }
 
   <div class="d-none d-lg-flex">
