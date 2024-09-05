@@ -1,23 +1,29 @@
-import { Component } from '@angular/core';
-import { CoreService } from 'src/app/services/core.service';
-import { FormGroup, FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router';
-import { MaterialModule } from '../../../material.module';
+import { Component } from "@angular/core";
+import { CoreService } from "src/app/services/core.service";
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  FormsModule,
+  ReactiveFormsModule,
+} from "@angular/forms";
+import { Router, RouterModule } from "@angular/router";
+import { MaterialModule } from "../../../material.module";
 
 @Component({
-  selector: 'app-side-login',
+  selector: "app-side-login",
   standalone: true,
   imports: [RouterModule, MaterialModule, FormsModule, ReactiveFormsModule],
-  templateUrl: './side-login.component.html',
+  templateUrl: "./side-login.component.html",
 })
 export class AppSideLoginComponent {
-  options = this.settings.getOptions();
+  options = this.coreService.getOptions();
 
-  constructor(private settings: CoreService, private router: Router) { }
+  constructor(private coreService: CoreService, private router: Router) {}
 
   form = new FormGroup({
-    uname: new FormControl('', [Validators.required, Validators.minLength(6)]),
-    password: new FormControl('', [Validators.required]),
+    uname: new FormControl("", [Validators.required, Validators.minLength(6)]),
+    password: new FormControl("", [Validators.required]),
   });
 
   get f() {
@@ -26,6 +32,6 @@ export class AppSideLoginComponent {
 
   submit() {
     // console.log(this.form.value);
-    this.router.navigate(['/starter']);
+    this.router.navigate(["/starter"]);
   }
 }

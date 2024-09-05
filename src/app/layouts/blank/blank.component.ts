@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
-import { CoreService } from 'src/app/services/core.service';
-import { AppSettings } from 'src/app/config';
-import { RouterOutlet } from '@angular/router';
-import { MaterialModule } from 'src/app/material.module';
-import { CommonModule } from '@angular/common';
+import { Component } from "@angular/core";
+import { CoreService } from "src/app/services/core.service";
+import { AppSettings } from "src/app/config";
+import { RouterOutlet } from "@angular/router";
+import { MaterialModule } from "src/app/material.module";
+import { CommonModule } from "@angular/common";
 
 @Component({
-  selector: 'app-blank',
-  templateUrl: './blank.component.html',
+  selector: "app-blank",
+  templateUrl: "./blank.component.html",
   styleUrls: [],
   standalone: true,
   imports: [RouterOutlet, MaterialModule, CommonModule],
@@ -15,10 +15,10 @@ import { CommonModule } from '@angular/common';
 export class BlankComponent {
   private htmlElement!: HTMLHtmlElement;
 
-  options = this.settings.getOptions();
+  options = this.coreService.getOptions();
 
-  constructor(private settings: CoreService) {
-    this.htmlElement = document.querySelector('html')!;
+  constructor(private coreService: CoreService) {
+    this.htmlElement = document.querySelector("html")!;
     // Initialize project theme with options
     this.receiveOptions(this.options);
   }
@@ -29,12 +29,12 @@ export class BlankComponent {
   }
 
   toggleDarkTheme(options: AppSettings) {
-    if (options.theme === 'dark') {
-      this.htmlElement.classList.add('dark-theme');
-      this.htmlElement.classList.remove('light-theme');
+    if (options.theme === "dark") {
+      this.htmlElement.classList.add("dark-theme");
+      this.htmlElement.classList.remove("light-theme");
     } else {
-      this.htmlElement.classList.remove('dark-theme');
-      this.htmlElement.classList.add('light-theme');
+      this.htmlElement.classList.remove("dark-theme");
+      this.htmlElement.classList.add("light-theme");
     }
   }
 }

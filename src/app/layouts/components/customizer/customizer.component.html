@@ -1,12 +1,11 @@
 <div class="customizerNav">
   <ng-scrollbar class="position-relative" style="height: calc(100vh - 50px)">
-   
     <div class="p-24">
       <h6 class="f-s-16 f-w-600 mat-subtitle-1 f-s-16 m-b-16">Theme Option</h6>
       <mat-button-toggle-group
         #group="matButtonToggleGroup"
         [(ngModel)]="options.theme"
-        (change)="setDark()"
+        (change)="setLayoutOptions()"
         class="customizer-button-group gap-16"
         [hideSingleSelectionIndicator]="hideSingleSelectionIndicator()"
       >
@@ -28,10 +27,11 @@
         <h6 class="f-s-16 f-w-600 mat-subtitle-1 f-s-16 m-b-16 m-t-24 p-t-16">
           Theme Colors
         </h6>
+
         <mat-button-toggle-group
           #group="matButtonToggleGroup"
           [(ngModel)]="options.activeTheme"
-          (change)="setColor()"
+          (change)="setLayoutOptions()"
           class="customizer-button-group theme-colors two-row"
           [hideSingleSelectionIndicator]="hideSingleSelectionIndicator()"
         >
@@ -106,7 +106,7 @@
       <mat-button-toggle-group
         #group="matButtonToggleGroup"
         [(ngModel)]="options.dir"
-        (change)="setDir()"
+        (change)="setLayoutOptions()"
         class="customizer-button-group gap-16"
         [hideSingleSelectionIndicator]="hideSingleSelectionIndicator()"
       >
@@ -139,7 +139,7 @@
         <mat-button-toggle-group
           #group="matButtonToggleGroup"
           [(ngModel)]="options.sidenavCollapsed"
-          (change)="setSidebar()"
+          (change)="setLayoutOptions()"
           class="customizer-button-group gap-16"
           [hideSingleSelectionIndicator]="hideSingleSelectionIndicator()"
         >
@@ -172,6 +172,7 @@
         #group="matButtonToggleGroup"
         [(ngModel)]="options.horizontal"
         class="customizer-button-group gap-16"
+        (change)="setLayoutOptions()"
         [hideSingleSelectionIndicator]="hideSingleSelectionIndicator()"
       >
         <mat-button-toggle [value]="false">

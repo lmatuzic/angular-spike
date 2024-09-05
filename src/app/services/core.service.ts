@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { AppSettings, defaults } from '../config';
+import { Injectable } from "@angular/core";
+import { BehaviorSubject, Observable } from "rxjs";
+import { AppSettings, defaults } from "../config";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class CoreService {
   get notify(): Observable<Record<string, any>> {

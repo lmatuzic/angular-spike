@@ -38,7 +38,7 @@
       <app-sidebar
         (toggleMobileNav)="sidenav.toggle()"
         [showToggle]="isOver"
-        [isHorizontal]="false"
+        [isHorizontal]="options.horizontal"
       />
 
       <ng-scrollbar class="position-relative" style="height: 100%">
@@ -94,12 +94,12 @@
     (closedStart)="onSidenavClosedStart()"
     class="sidebarNav"
   >
-    <app-sidebar [isHorizontal]="true" />
+    <app-sidebar [isHorizontal]="options.horizontal" />
 
     <ng-scrollbar class="position-relative" style="height: 100%">
       <mat-nav-list class="sidebar-list">
         @for(item of navItems; track item) {
-        <app-nav-item [item]="item" (notify)="sidenav.toggle()"> </app-nav-item>
+        <app-nav-item [item]="item" (notify)="sidenav.toggle()" />
         }
       </mat-nav-list>
     </ng-scrollbar>
@@ -140,10 +140,9 @@
     [ngClass]="{ 'p-l-24 p-r-24': !options.horizontal }"
     #content
   >
-    <!-- horizontal header -->
     @if(options.horizontal) {
     <app-header
-      [isHorizontal]="true"
+      [isHorizontal]="options.horizontal"
       (toggleMobileNav)="sidenav.toggle()"
       (toggleMobileFilterNav)="filterNavRight.toggle()"
     />
@@ -161,7 +160,7 @@
       @if(!options.horizontal) {
       <app-header
         [showToggle]="!isOver"
-        [isHorizontal]="false"
+        [isHorizontal]="options.horizontal"
         (toggleCollapsed)="toggleCollapsed()"
         (toggleMobileNav)="sidenav.toggle()"
         (toggleMobileFilterNav)="filterNavRight.toggle()"

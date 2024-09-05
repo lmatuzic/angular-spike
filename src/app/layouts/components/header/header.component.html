@@ -3,18 +3,10 @@
   <div class="d-none d-sm-flex">
     <app-branding></app-branding>
   </div>
-  } @if(showToggle) {
+  } @if (!isHorizontal) {
   <button
     mat-icon-button
-    (click)="toggleCollapsed.emit()"
-    class="d-flex justify-content-center"
-  >
-    <i-tabler name="align-left" class="icon-20 d-flex" />
-  </button>
-  } @if(!showToggle) {
-  <button
-    mat-icon-button
-    (click)="toggleMobileNav.emit()"
+    (click)="handleToggle()"
     class="d-flex justify-content-center"
   >
     <i-tabler name="align-left" class="icon-20 d-flex" />
