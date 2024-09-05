@@ -17,6 +17,7 @@ import { NavService } from "src/app/services/nav.service";
 import { MediaMatcher } from "@angular/cdk/layout";
 import { AppHorizontalNavItemComponent } from "../horizontal-nav-item/horizontal-nav-item.component";
 import { navItems } from "./nav-item/constants";
+import { horizontalSidebarItems } from "./constants";
 
 @Component({
   selector: "app-sidebar",
@@ -40,7 +41,7 @@ export class SidebarComponent {
   @Output() toggleMobileNav = new EventEmitter<void>();
   @Output() toggleCollapsed = new EventEmitter<void>();
 
-  navItems = navItems;
+  navItems = horizontalSidebarItems;
   parentActive = "";
 
   mobileQuery: MediaQueryList;
@@ -52,6 +53,7 @@ export class SidebarComponent {
     media: MediaMatcher,
     changeDetectorRef: ChangeDetectorRef
   ) {
+    this.isHorizontal = false; // Initialize the isHorizontal property
     this.mobileQuery = media.matchMedia("(min-width: 1100px)");
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);

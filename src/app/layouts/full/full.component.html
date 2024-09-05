@@ -146,6 +146,8 @@
       (toggleMobileNav)="sidenav.toggle()"
       (toggleMobileFilterNav)="filterNavRight.toggle()"
     />
+
+    <app-sidebar [isHorizontal]="options.horizontal" />
     }
 
     <main
@@ -196,6 +198,9 @@
   </mat-sidenav>
 </mat-sidenav-container>
 
+<!-- ------------------------------------------------------------------
+  Mobile Apps Sidebar
+  ------------------------------------------------------------------ -->
 <mat-drawer #filterNavRight mode="over" position="end" class="filter-sidebar">
   <div>
     <div class="d-flex justify-content-between align-items-center">

@@ -23,7 +23,6 @@ import { NgScrollbarModule } from "ngx-scrollbar";
 import { MaterialModule } from "src/app/material.module";
 import { LanguageSelectorComponent } from "src/app/shared/components/language-selector/language-selector.component";
 import { HeaderDropdownLinksComponent } from "../header-dropdown-links/header-dropdown-links.component";
-import { MobileMenuButtonComponent } from "../mobile-menu-button/mobile-menu-button.component";
 import { profiles, notifications, apps, quicklinks } from "./constants";
 import { BrandingComponent } from "../branding/branding.component";
 
@@ -41,7 +40,6 @@ import { BrandingComponent } from "../branding/branding.component";
     MatMenuModule,
     MatSidenavModule,
     MatButtonModule,
-    MobileMenuButtonComponent,
     LanguageSelectorComponent,
     HeaderDropdownLinksComponent,
     BrandingComponent,
@@ -54,6 +52,7 @@ export class HeaderComponent implements OnChanges {
 
   @Output() toggleMobileNav = new EventEmitter<void>();
   @Output() toggleCollapsed = new EventEmitter<void>();
+  @Output() toggleMobileFilterNav = new EventEmitter<void>();
 
   searchText: string = "";
   navItems = navItems;

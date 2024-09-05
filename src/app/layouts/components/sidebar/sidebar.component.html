@@ -1,25 +1,16 @@
 @if(isHorizontal) { @if(mobileQuery.matches) {
 <div class="horizontal-sidebar p-y-8 b-t-1">
   <div class="container">
-    <div>
-      <div class="horizontal-navbar hstack align-items-center">
-        @for(item of navItems; track item) {
-        <app-horizontal-nav-item
-          [item]="item"
-          class="parentBox {{ item.ddType }}"
-          [ngClass]="{
-            pactive: item.route == parentActive ? 'pactive' : ''
-          }"
-        >
-        </app-horizontal-nav-item>
-        }
-      </div>
-    </div>
+    <h2>Horizontal sidebar here</h2>
   </div>
 </div>
 } } @else {
 <div class="d-flex align-items-center justify-content-between">
   <app-branding></app-branding>
+
+  <div>
+    <h2>Vertical sidebar here</h2>
+  </div>
 
   @if(showToggle) {
   <a
@@ -27,7 +18,7 @@
     (click)="toggleMobileNav.emit()"
     class="d-flex justify-content-center ng-star-inserted icon-40 align-items-center mat-body-1"
   >
-    <i-tabler name="x" class="icon-20 d-flex"></i-tabler>
+    <i-tabler name="x" class="icon-20 d-flex" />
   </a>
   }
 </div>

@@ -1,18 +1,18 @@
-import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
-import { TablerIconsModule } from 'angular-tabler-icons';
-import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
-import { TranslateModule } from '@ngx-translate/core';
-import { NavService } from 'src/app/services/nav.service';
+import { Component, OnInit, Input } from "@angular/core";
+import { Router } from "@angular/router";
+import { TablerIconsModule } from "angular-tabler-icons";
+import { CommonModule } from "@angular/common";
+import { MatIconModule } from "@angular/material/icon";
+import { TranslateModule } from "@ngx-translate/core";
+import { NavService } from "src/app/services/nav.service";
 
 @Component({
-  selector: 'app-horizontal-nav-item',
+  selector: "app-horizontal-nav-item",
   standalone: true,
   imports: [TablerIconsModule, CommonModule, MatIconModule, TranslateModule],
-  templateUrl: './horizontal-nav-item.component.html',
+  templateUrl: "./horizontal-nav-item.component.html",
 })
-export class AppHorizontalNavItemComponent {
+export class AppHorizontalNavItemComponent implements OnInit {
   @Input() depth: any;
   @Input() item: any;
 
@@ -22,8 +22,9 @@ export class AppHorizontalNavItemComponent {
     }
   }
 
+  ngOnInit() {}
   onItemSelected(item: any) {
-    if (!item.children?.length) {
+    if (!item.children || !item.children.length) {
       this.router.navigate([item.route]);
     }
   }

@@ -24,11 +24,13 @@
   <!-- Common elements -->
   <span class="flex-1-auto"></span>
 
-  <app-mobile-menu-button>
-    <button mat-button [routerLink]="['/chat']">Chat</button>
-    <button mat-button [routerLink]="['/calendar']">Calendar</button>
-    <button mat-button [routerLink]="['/email']">Email</button>
-  </app-mobile-menu-button>
+  <button
+    mat-icon-button
+    (click)="toggleMobileFilterNav.emit()"
+    class="d-flex d-lg-none justify-content-center"
+  >
+    <i-tabler name="grid-dots" class="icon-20 d-flex"></i-tabler>
+  </button>
 
   <!-- Search button -->
   <button mat-stroked-button class="d-none d-lg-flex" (click)="openDialog()">
