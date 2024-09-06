@@ -43,16 +43,16 @@
         position: static;
 
         &:hover {
-          >.childBox>.ddmenu {
+          > .childBox > .ddmenu {
             display: inline-block;
           }
         }
 
-        >.childBox {
+        > .childBox {
           width: 100%;
           left: 0;
 
-          >.ddmenu {
+          > .ddmenu {
             width: 24%;
           }
         }
@@ -60,15 +60,15 @@
 
       &.two-column {
         &:hover {
-          >.childBox>.ddmenu {
+          > .childBox > .ddmenu {
             display: inline-block;
           }
         }
 
-        >.childBox {
+        > .childBox {
           width: 600px;
 
-          >.ddmenu {
+          > .ddmenu {
             width: 49%;
           }
         }
@@ -107,9 +107,8 @@
         }
 
         &.success {
-
           &:hover,
-          &:hover>.activeMenu,
+          &:hover > .activeMenu,
           &.activeMenu {
             color: $success !important;
           }
@@ -120,9 +119,8 @@
         }
 
         &.warning {
-
           &:hover,
-          &:hover>.activeMenu,
+          &:hover > .activeMenu,
           &.activeMenu {
             color: $warning !important;
           }
@@ -133,9 +131,8 @@
         }
 
         &.error {
-
           &:hover,
-          &:hover>.activeMenu,
+          &:hover > .activeMenu,
           &.activeMenu {
             color: $error !important;
           }
@@ -146,13 +143,13 @@
         }
       }
 
-      &:hover>.activeMenu,
+      &:hover > .activeMenu,
       .activeMenu {
         color: $primary !important;
         font-weight: 600;
       }
 
-      &:hover>.activeMenu,
+      &:hover > .activeMenu,
       .activeMenu {
         color: $textPrimary;
         background-color: $light-primary;
@@ -178,34 +175,34 @@
         }
       }
 
-      &:hover>.childBox>.ddmenu:hover {
+      &:hover > .childBox > .ddmenu:hover {
         background-color: rgba(0, 0, 0, 0.025);
 
-        &:hover>.childBox>.ddmenu:hover {
+        &:hover > .childBox > .ddmenu:hover {
           background-color: rgba(0, 0, 0, 0.025);
         }
       }
 
-      &:hover>.childBox>.ddmenu:hover>.childBox {
+      &:hover > .childBox > .ddmenu:hover > .childBox {
         left: 230px;
         top: 0px;
         z-index: 9;
 
-        >.ddmenu:hover>.childBox {
+        > .ddmenu:hover > .childBox {
           left: 235px;
           top: 0;
         }
       }
 
-      &:hover>.childBox>.ddmenu {
+      &:hover > .childBox > .ddmenu {
         display: block;
         padding: 0;
 
-        &:hover>.childBox>.ddmenu {
+        &:hover > .childBox > .ddmenu {
           display: block;
           padding: 0;
 
-          &:hover>.childBox>.ddmenu {
+          &:hover > .childBox > .ddmenu {
             display: block;
             padding: 0;
           }
@@ -216,7 +213,6 @@
 }
 
 .sidebarNav-horizontal {
-
   .topbar,
   .mainWrapper {
     width: 100%;
@@ -225,10 +221,9 @@
 
   .horizontal-navbar {
     .parentBox {
-
-      &.pactive>a,
-      &.pactive>a:hover,
-      &.pactive:hover>a {
+      &.pactive > a,
+      &.pactive > a:hover,
+      &.pactive:hover > a {
         &:before {
           width: 100%;
         }
@@ -236,21 +231,21 @@
         border-radius: $border-radius;
       }
 
-      &.pactive>a.warning,
-      &.pactive>a.warning:hover,
-      &.pactive:hover>a.warning {
+      &.pactive > a.warning,
+      &.pactive > a.warning:hover,
+      &.pactive:hover > a.warning {
         color: $warning;
       }
 
-      &.pactive>a.error,
-      &.pactive>a.error:hover,
-      &.pactive:hover>a.error {
+      &.pactive > a.error,
+      &.pactive > a.error:hover,
+      &.pactive:hover > a.error {
         color: $error;
       }
 
-      &.pactive>a.success,
-      &.pactive>a.success:hover,
-      &.pactive:hover>a.success {
+      &.pactive > a.success,
+      &.pactive > a.success:hover,
+      &.pactive:hover > a.success {
         color: $success;
       }
     }
@@ -261,12 +256,12 @@
   .sidebarNav-horizontal {
     .horizontal-navbar {
       .parentBox {
-        &:last-child:hover>.childBox>.ddmenu {
-          &:hover>.childBox {
+        &:last-child:hover > .childBox > .ddmenu {
+          &:hover > .childBox {
             right: 250px;
             left: unset;
 
-            >.ddmenu:hover>.childBox {
+            > .ddmenu:hover > .childBox {
               right: 250px;
               left: unset;
             }
@@ -281,12 +276,12 @@
   .sidebarNav-horizontal {
     .horizontal-navbar {
       .parentBox {
-        &:last-child:hover>.childBox>.ddmenu {
-          &:hover>.childBox {
+        &:last-child:hover > .childBox > .ddmenu {
+          &:hover > .childBox {
             left: 250px;
             right: unset;
 
-            >.ddmenu:hover>.childBox {
+            > .ddmenu:hover > .childBox {
               left: 250px;
               right: unset;
             }

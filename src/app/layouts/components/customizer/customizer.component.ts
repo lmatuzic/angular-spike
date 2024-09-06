@@ -8,7 +8,7 @@ import {
 } from "@angular/core";
 import { AppSettings } from "src/app/config";
 import { CoreService } from "src/app/services/core.service";
-import { BrandingComponent } from "../branding/branding.component";
+import { BrandingComponent } from "../../../shared/components/branding/branding.component";
 import { TablerIconsModule } from "angular-tabler-icons";
 import { MaterialModule } from "src/app/material.module";
 import { NgIf } from "@angular/common";

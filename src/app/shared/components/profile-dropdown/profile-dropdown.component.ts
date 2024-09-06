@@ -1,10 +1,9 @@
-import { profiles } from "./../header/constants";
 import { CommonModule } from "@angular/common";
 import { Component, Input } from "@angular/core";
-import { MatMenuModule } from "@angular/material/menu";
 import { RouterModule } from "@angular/router";
 import { TablerIconsModule } from "angular-tabler-icons";
 import { NgScrollbarModule } from "ngx-scrollbar";
+import { Profile } from "src/app/layouts/components/header/types";
 import { MaterialModule } from "src/app/material.module";
 
 @Component({
@@ -20,5 +19,5 @@ import { MaterialModule } from "src/app/material.module";
   ],
 })
 export class ProfileDropdownComponent {
-  @Input() profiles = profiles;
+  @Input() profiles: Profile[] = [];
 }

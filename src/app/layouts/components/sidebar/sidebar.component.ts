@@ -12,11 +12,11 @@ import { MatExpansionModule } from "@angular/material/expansion";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatButtonModule } from "@angular/material/button";
 import { TablerIconsModule } from "angular-tabler-icons";
-import { BrandingComponent } from "../branding/branding.component";
 import { NavService } from "src/app/services/nav.service";
 import { MediaMatcher } from "@angular/cdk/layout";
 import { AppHorizontalNavItemComponent } from "../horizontal-nav-item/horizontal-nav-item.component";
 import { AppNavItemComponent } from "../nav-item/nav-item.component";
+import { BrandingComponent } from "src/app/shared/components/branding/branding.component";
 
 @Component({
   selector: "app-sidebar",
@@ -29,9 +29,9 @@ import { AppNavItemComponent } from "../nav-item/nav-item.component";
     MatMenuModule,
     MatButtonModule,
     TablerIconsModule,
-    BrandingComponent,
     AppHorizontalNavItemComponent,
     AppNavItemComponent,
+    BrandingComponent,
   ],
   templateUrl: "./sidebar.component.html",
 })

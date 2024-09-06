@@ -14,12 +14,12 @@ import { CommonModule } from "@angular/common";
 import { NgScrollbarModule } from "ngx-scrollbar";
 import { TablerIconsModule } from "angular-tabler-icons";
 import { AppBreadcrumbComponent } from "../components/breadcrumb/breadcrumb.component";
-import { CustomizerComponent } from "../components/customizer/customizer.component";
 import { HeaderComponent } from "../components/header/header.component";
 import { SidebarComponent } from "../components/sidebar/sidebar.component";
 import { AppNavItemComponent } from "../components/nav-item/nav-item.component";
 import { apps } from "./constants";
 import { MobileSidebarComponent } from "../components/mobile-sidebar/mobile-sidebar.component";
+import { CustomizerComponent } from "src/app/layouts/components/customizer/customizer.component";
 
 const MOBILE_VIEW = "screen and (max-width: 768px)";
 const TABLET_VIEW = "screen and (min-width: 769px) and (max-width: 1024px)";
@@ -39,9 +39,9 @@ const BELOWMONITOR = "screen and (max-width: 1023px)";
     HeaderComponent,
     SidebarComponent,
     AppBreadcrumbComponent,
-    CustomizerComponent,
     AppNavItemComponent,
     MobileSidebarComponent,
+    CustomizerComponent,
   ],
   templateUrl: "./full.component.html",
   styleUrls: [],

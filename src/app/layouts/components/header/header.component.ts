@@ -17,10 +17,10 @@ import { MaterialModule } from "src/app/material.module";
 import { LanguageSelectorComponent } from "src/app/shared/components/language-selector/language-selector.component";
 import { HeaderDropdownLinksComponent } from "../header-dropdown-links/header-dropdown-links.component";
 import { profiles, notifications, apps, quicklinks } from "./constants";
-import { BrandingComponent } from "../branding/branding.component";
-import { ProfileDropdownComponent } from "../profile-dropdown/profile-dropdown.component";
-import { ShortcutsDropdownComponent } from "../shortcuts-dropdown/shortcuts-dropdown.component";
 import { NotificationsDropdownComponent } from "../messages-dropdown/notifications-dropdown.component";
+import { BrandingComponent } from "src/app/shared/components/branding/branding.component";
+import { ProfileDropdownComponent } from "src/app/shared/components/profile-dropdown/profile-dropdown.component";
+import { ShortcutsDropdownComponent } from "src/app/shared/components/shortcuts-dropdown/shortcuts-dropdown.component";
 
 @Component({
   selector: "app-header",
