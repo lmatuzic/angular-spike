@@ -16,8 +16,7 @@ import { BrandingComponent } from "../branding/branding.component";
 import { NavService } from "src/app/services/nav.service";
 import { MediaMatcher } from "@angular/cdk/layout";
 import { AppHorizontalNavItemComponent } from "../horizontal-nav-item/horizontal-nav-item.component";
-import { navItems } from "./nav-item/constants";
-import { horizontalSidebarItems } from "./constants";
+import { AppNavItemComponent } from "../nav-item/nav-item.component";
 
 @Component({
   selector: "app-sidebar",
@@ -32,6 +31,7 @@ import { horizontalSidebarItems } from "./constants";
     TablerIconsModule,
     BrandingComponent,
     AppHorizontalNavItemComponent,
+    AppNavItemComponent,
   ],
   templateUrl: "./sidebar.component.html",
 })
@@ -41,7 +41,6 @@ export class SidebarComponent {
   @Output() toggleMobileNav = new EventEmitter<void>();
   @Output() toggleCollapsed = new EventEmitter<void>();
 
-  navItems = horizontalSidebarItems;
   parentActive = "";
 
   mobileQuery: MediaQueryList;
@@ -53,10 +52,10 @@ export class SidebarComponent {
     media: MediaMatcher,
     changeDetectorRef: ChangeDetectorRef
   ) {
-    this.isHorizontal = false; // Initialize the isHorizontal property
+    this.isHorizontal = false; // initialize isHorizontal property
     this.mobileQuery = media.matchMedia("(min-width: 1100px)");
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
+    this.mobileQuery.addEventListener("change", this._mobileQueryListener);
     this.router.events.subscribe(
       () => (this.parentActive = this.router.url.split("/")[1])
     );

@@ -34,9 +34,7 @@ import { NgScrollbarModule } from "ngx-scrollbar";
 export class CustomizerComponent {
   @Output() optionsChange = new EventEmitter<AppSettings>();
 
-  constructor(private coreService: CoreService) {
-    console.log(this.coreService.getOptions());
-  }
+  constructor(private coreService: CoreService) {}
 
   hideSingleSelectionIndicator = signal(true);
   hideMultipleSelectionIndicator = signal(true);

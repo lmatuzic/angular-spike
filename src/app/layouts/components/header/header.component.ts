@@ -1,15 +1,8 @@
-import {
-  Component,
-  Output,
-  EventEmitter,
-  Input,
-  SimpleChanges,
-  OnChanges,
-} from "@angular/core";
+import { Component, Output, EventEmitter, Input } from "@angular/core";
 import { CoreService } from "src/app/services/core.service";
 import { MatDialog } from "@angular/material/dialog";
 import { TranslateService } from "@ngx-translate/core";
-import { navItems } from "../sidebar/nav-item/constants";
+import { navItems } from "../nav-item/constants";
 import { SearchDialogComponent } from "../../../shared/components/search-dialog/search-dialog.component";
 import { Language } from "./types";
 import { CommonModule } from "@angular/common";
@@ -45,7 +38,7 @@ import { BrandingComponent } from "../branding/branding.component";
     BrandingComponent,
   ],
 })
-export class HeaderComponent implements OnChanges {
+export class HeaderComponent {
   @Input() showToggle = true;
   @Input() toggleChecked = false;
   @Input() isHorizontal = true;
@@ -110,13 +103,7 @@ export class HeaderComponent implements OnChanges {
     this.selectedLanguage = lang;
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    if (changes["isHorizontal"]) {
-      console.log("Header isHorizontal (ngOnChanges):", this.isHorizontal);
-    }
-  }
-
-  openDialog() {
+  openSearchDialog() {
     const dialogRef = this.dialog.open(SearchDialogComponent);
 
     dialogRef.afterClosed().subscribe((result) => {

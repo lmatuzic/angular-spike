@@ -7,7 +7,7 @@ import { CoreService } from "src/app/services/core.service";
 import { AppSettings } from "src/app/config";
 import { filter } from "rxjs/operators";
 import { NavigationEnd, Router, RouterModule } from "@angular/router";
-import { navItems } from "../components/sidebar/nav-item/constants";
+import { navItems } from "../components/nav-item/constants";
 import { NavService } from "../../services/nav.service";
 import { MaterialModule } from "src/app/material.module";
 import { CommonModule } from "@angular/common";
@@ -17,7 +17,7 @@ import { AppBreadcrumbComponent } from "../components/breadcrumb/breadcrumb.comp
 import { CustomizerComponent } from "../components/customizer/customizer.component";
 import { HeaderComponent } from "../components/header/header.component";
 import { SidebarComponent } from "../components/sidebar/sidebar.component";
-import { AppNavItemComponent } from "../components/sidebar/nav-item/nav-item.component";
+import { AppNavItemComponent } from "../components/nav-item/nav-item.component";
 import { apps } from "./constants";
 
 const MOBILE_VIEW = "screen and (max-width: 768px)";

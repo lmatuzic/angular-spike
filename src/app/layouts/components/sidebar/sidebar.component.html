@@ -1,21 +1,25 @@
-@if(isHorizontal) { @if(mobileQuery.matches) {
+@if (isHorizontal) { @if(mobileQuery.matches) {
 <div class="horizontal-sidebar p-y-8 b-t-1">
   <div class="container">
-    <h2>Horizontal sidebar here</h2>
+    <h2>Horizontal sidebar content here</h2>
   </div>
 </div>
 } } @else {
-<div class="d-flex align-items-center justify-content-between">
-  <app-branding></app-branding>
+<div class="vertical-sidebar">
+  <h2 style="text-align: center">Vertical sidebar content here</h2>
 
-  @if(showToggle) {
-  <a
-    href="javascript:void(0)"
-    (click)="toggleMobileNav.emit()"
-    class="d-flex justify-content-center ng-star-inserted icon-40 align-items-center mat-body-1"
-  >
-    <i-tabler name="x" class="icon-20 d-flex" />
-  </a>
-  }
+  <div class="d-flex align-items-center justify-content-between">
+    <app-branding></app-branding>
+
+    @if (showToggle) {
+    <a
+      href="javascript:void(0)"
+      (click)="toggleMobileNav.emit()"
+      class="d-flex justify-content-center ng-star-inserted icon-40 align-items-center mat-body-1"
+    >
+      <i-tabler name="x" class="icon-20 d-flex" />
+    </a>
+    }
+  </div>
 </div>
 }

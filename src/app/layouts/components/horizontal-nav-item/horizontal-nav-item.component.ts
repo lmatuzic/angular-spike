@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Router } from "@angular/router";
 import { TablerIconsModule } from "angular-tabler-icons";
 import { CommonModule } from "@angular/common";
@@ -12,7 +12,7 @@ import { NavService } from "src/app/services/nav.service";
   imports: [TablerIconsModule, CommonModule, MatIconModule, TranslateModule],
   templateUrl: "./horizontal-nav-item.component.html",
 })
-export class AppHorizontalNavItemComponent implements OnInit {
+export class AppHorizontalNavItemComponent {
   @Input() depth: any;
   @Input() item: any;
 
@@ -22,9 +22,8 @@ export class AppHorizontalNavItemComponent implements OnInit {
     }
   }
 
-  ngOnInit() {}
   onItemSelected(item: any) {
-    if (!item.children || !item.children.length) {
+    if (!item?.children.length) {
       this.router.navigate([item.route]);
     }
   }
