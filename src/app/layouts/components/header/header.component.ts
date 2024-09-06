@@ -18,6 +18,9 @@ import { LanguageSelectorComponent } from "src/app/shared/components/language-se
 import { HeaderDropdownLinksComponent } from "../header-dropdown-links/header-dropdown-links.component";
 import { profiles, notifications, apps, quicklinks } from "./constants";
 import { BrandingComponent } from "../branding/branding.component";
+import { ProfileDropdownComponent } from "../profile-dropdown/profile-dropdown.component";
+import { ShortcutsDropdownComponent } from "../shortcuts-dropdown/shortcuts-dropdown.component";
+import { NotificationsDropdownComponent } from "../messages-dropdown/notifications-dropdown.component";
 
 @Component({
   selector: "app-header",
@@ -36,6 +39,9 @@ import { BrandingComponent } from "../branding/branding.component";
     LanguageSelectorComponent,
     HeaderDropdownLinksComponent,
     BrandingComponent,
+    ProfileDropdownComponent,
+    ShortcutsDropdownComponent,
+    NotificationsDropdownComponent,
   ],
 })
 export class HeaderComponent {
