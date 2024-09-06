@@ -25,7 +25,6 @@
   }
 
   // sidebar
-
   .horizontal-sidebar {
     background: $white;
   }
@@ -38,6 +37,34 @@
       position: relative;
       z-index: 5;
       margin: 5px 0;
+
+      &.pactive > a,
+      &.pactive > a:hover,
+      &.pactive:hover > a {
+        &:before {
+          width: 100%;
+        }
+
+        border-radius: $border-radius;
+      }
+
+      &.pactive > a.warning,
+      &.pactive > a.warning:hover,
+      &.pactive:hover > a.warning {
+        color: $warning;
+      }
+
+      &.pactive > a.error,
+      &.pactive > a.error:hover,
+      &.pactive:hover > a.error {
+        color: $error;
+      }
+
+      &.pactive > a.success,
+      &.pactive > a.success:hover,
+      &.pactive:hover > a.success {
+        color: $success;
+      }
 
       &.mega-menu {
         position: static;
@@ -145,14 +172,9 @@
 
       &:hover > .activeMenu,
       .activeMenu {
-        color: $primary !important;
-        font-weight: 600;
-      }
-
-      &:hover > .activeMenu,
-      .activeMenu {
         color: $textPrimary;
         background-color: $light-primary;
+        font-weight: 600;
       }
 
       .down-icon .mat-icon {
@@ -210,45 +232,11 @@
       }
     }
   }
-}
 
-.sidebarNav-horizontal {
   .topbar,
   .mainWrapper {
     width: 100%;
     border-radius: 0;
-  }
-
-  .horizontal-navbar {
-    .parentBox {
-      &.pactive > a,
-      &.pactive > a:hover,
-      &.pactive:hover > a {
-        &:before {
-          width: 100%;
-        }
-
-        border-radius: $border-radius;
-      }
-
-      &.pactive > a.warning,
-      &.pactive > a.warning:hover,
-      &.pactive:hover > a.warning {
-        color: $warning;
-      }
-
-      &.pactive > a.error,
-      &.pactive > a.error:hover,
-      &.pactive:hover > a.error {
-        color: $error;
-      }
-
-      &.pactive > a.success,
-      &.pactive > a.success:hover,
-      &.pactive:hover > a.success {
-        color: $success;
-      }
-    }
   }
 }
 

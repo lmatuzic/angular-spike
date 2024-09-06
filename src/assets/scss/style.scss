@@ -7,9 +7,6 @@
 @import "helpers/color";
 @import "helpers/icon-size";
 
-//Theme colors
-
-@import "themecolors/default_theme";
 @include mat.all-component-themes($bluetheme);
 
 .dark-theme {

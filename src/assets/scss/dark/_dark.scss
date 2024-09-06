@@ -19,10 +19,22 @@
     color: $textPrimary !important;
   }
 
-  .sidebar-list.mdc-list .expanded-items .menu-list-item:hover .mdc-list-item__primary-text,
-  .sidebar-list.mdc-list .expanded-items .menu-list-item:hover .mat-mdc-list-item-icon,
-  .sidebar-list.mdc-list .expanded-items .menu-list-item.activeMenu.expanded .mdc-list-item__primary-text,
-  .sidebar-list.mdc-list .expanded-items .menu-list-item.activeMenu.expanded .mat-mdc-list-item-icon {
+  .sidebar-list.mdc-list
+    .expanded-items
+    .menu-list-item:hover
+    .mdc-list-item__primary-text,
+  .sidebar-list.mdc-list
+    .expanded-items
+    .menu-list-item:hover
+    .mat-mdc-list-item-icon,
+  .sidebar-list.mdc-list
+    .expanded-items
+    .menu-list-item.activeMenu.expanded
+    .mdc-list-item__primary-text,
+  .sidebar-list.mdc-list
+    .expanded-items
+    .menu-list-item.activeMenu.expanded
+    .mat-mdc-list-item-icon {
     color: $textPrimary !important;
   }
 
@@ -123,9 +135,12 @@
   //   border
   // -------------------------------------------------------
   .theme-select {
-
-    .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading,
-    .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__trailing {
+    .mdc-text-field--outlined
+      .mdc-notched-outline
+      .mdc-notched-outline__leading,
+    .mdc-text-field--outlined
+      .mdc-notched-outline
+      .mdc-notched-outline__trailing {
       border-color: $darkborderColor;
     }
   }
@@ -139,14 +154,22 @@
     border: 1px solid $darkformborderColor !important;
   }
 
-  .mat-mdc-radio-button .mdc-radio .mdc-radio__native-control:enabled:not(:checked)+.mdc-radio__background .mdc-radio__outer-circle {
+  .mat-mdc-radio-button
+    .mdc-radio
+    .mdc-radio__native-control:enabled:not(:checked)
+    + .mdc-radio__background
+    .mdc-radio__outer-circle {
     border-color: $darkformborderColor;
   }
 
   .mdc-text-field--outlined .mdc-notched-outline__leading,
   .mdc-text-field--outlined .mdc-notched-outline__trailing,
   .mdc-text-field--outlined .mdc-notched-outline__notch,
-  .mat-mdc-radio-button .mdc-radio .mdc-radio__native-control:enabled+.mdc-radio__background .mdc-radio__inner-circle {
+  .mat-mdc-radio-button
+    .mdc-radio
+    .mdc-radio__native-control:enabled
+    + .mdc-radio__background
+    .mdc-radio__inner-circle {
     border-color: $darkformborderColor !important;
   }
 
@@ -220,7 +243,9 @@
   }
 
   // fill
-  .customizer-button-group .mat-button-toggle-appearance-standard.mat-button-toggle-checked i-tabler.fill-icon {
+  .customizer-button-group
+    .mat-button-toggle-appearance-standard.mat-button-toggle-checked
+    i-tabler.fill-icon {
     fill: rgba($primary, 0.2);
   }
 
@@ -266,17 +291,23 @@
 
     .mat-mdc-icon-button[disabled][disabled] {
       --mdc-icon-button-icon-color: rgba(255, 255, 255, 0.5) !important;
-      --mdc-icon-button-disabled-icon-color: rgba(255,
-          255,
-          255,
-          0.5) !important;
+      --mdc-icon-button-disabled-icon-color: rgba(
+        255,
+        255,
+        255,
+        0.5
+      ) !important;
     }
   }
 }
 
-// horizontal + dark
-
 html.dark-theme {
+  .bg-gredient {
+    &::before {
+      opacity: 0.05;
+    }
+  }
+
   .cardBorder {
     .mdc-card {
       box-shadow: none !important;
@@ -289,8 +320,7 @@ html.dark-theme {
   }
 
   .sidebarNav-horizontal .horizontal-navbar .parentBox {
-
-    &:hover>.activeMenu,
+    &:hover > .activeMenu,
     .activeMenu {
       color: $white;
     }
@@ -303,23 +333,14 @@ html.dark-theme {
       background-color: $darkcardbg;
     }
   }
-}
 
-// -----------------------------------------------------------------
-// Only For Buttons
-// -----------------------------------------------------------------
-html.dark-theme {
-  .bg-gredient {
-    &::before {
-      opacity: 0.05;
-    }
-  }
-
-  .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder,
+  .mdc-text-field:not(.mdc-text-field--disabled)
+    .mdc-text-field__input::placeholder,
   .mdc-text-field__input::placeholder,
   .mat-mdc-tab .mdc-tab__text-label,
   .mat-mdc-tab-link .mdc-tab__text-label,
-  .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) .mdc-evolution-chip__text-label,
+  .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled)
+    .mdc-evolution-chip__text-label,
   .mat-mdc-checkbox-disabled label {
     color: rgba(255, 255, 255, 0.6) !important;
   }
@@ -350,8 +371,7 @@ html.dark-theme {
   .mat-calendar-body-cell-content,
   .mat-date-range-input-separator,
   .mat-expansion-panel-header-title,
-  .mat-step-header .mat-step-label.mat-step-label-active,
-  .mat-expansion-panel-header-title {
+  .mat-step-header .mat-step-label.mat-step-label-active {
     color: white;
   }
 
@@ -403,7 +423,9 @@ html.dark-theme {
     border: solid 1px $darkborderColor;
   }
 
-  .mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle {
+  .mat-button-toggle-group-appearance-standard
+    .mat-button-toggle
+    + .mat-button-toggle {
     border-left: solid 1px $darkborderColor;
   }
 
@@ -419,9 +441,11 @@ html.dark-theme {
     }
   }
 
-  @include syntax-colors($primary: $primary,
+  @include syntax-colors(
+    $primary: $primary,
     $accent: $accent,
     $success: $success,
     $warning: $warning,
-    $error: $error );
+    $error: $error
+  );
 }
