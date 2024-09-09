@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { Event, NavigationEnd, Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {Event, NavigationEnd, Router} from '@angular/router';
+import {BehaviorSubject} from 'rxjs';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class NavService {
   public currentUrl = new BehaviorSubject<any>(undefined);
 

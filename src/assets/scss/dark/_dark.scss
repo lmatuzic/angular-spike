@@ -1,4 +1,4 @@
-@use "sass:meta";
+@use 'sass:meta';
 
 .dark-theme {
   $textPrimary: #eaeff4;
@@ -19,22 +19,10 @@
     color: $textPrimary !important;
   }
 
-  .sidebar-list.mdc-list
-    .expanded-items
-    .menu-list-item:hover
-    .mdc-list-item__primary-text,
-  .sidebar-list.mdc-list
-    .expanded-items
-    .menu-list-item:hover
-    .mat-mdc-list-item-icon,
-  .sidebar-list.mdc-list
-    .expanded-items
-    .menu-list-item.activeMenu.expanded
-    .mdc-list-item__primary-text,
-  .sidebar-list.mdc-list
-    .expanded-items
-    .menu-list-item.activeMenu.expanded
-    .mat-mdc-list-item-icon {
+  .sidebar-list.mdc-list .expanded-items .menu-list-item:hover .mdc-list-item__primary-text,
+  .sidebar-list.mdc-list .expanded-items .menu-list-item:hover .mat-mdc-list-item-icon,
+  .sidebar-list.mdc-list .expanded-items .menu-list-item.activeMenu.expanded .mdc-list-item__primary-text,
+  .sidebar-list.mdc-list .expanded-items .menu-list-item.activeMenu.expanded .mat-mdc-list-item-icon {
     color: $textPrimary !important;
   }
 
@@ -135,12 +123,8 @@
   //   border
   // -------------------------------------------------------
   .theme-select {
-    .mdc-text-field--outlined
-      .mdc-notched-outline
-      .mdc-notched-outline__leading,
-    .mdc-text-field--outlined
-      .mdc-notched-outline
-      .mdc-notched-outline__trailing {
+    .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading,
+    .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__trailing {
       border-color: $darkborderColor;
     }
   }
@@ -243,9 +227,7 @@
   }
 
   // fill
-  .customizer-button-group
-    .mat-button-toggle-appearance-standard.mat-button-toggle-checked
-    i-tabler.fill-icon {
+  .customizer-button-group .mat-button-toggle-appearance-standard.mat-button-toggle-checked i-tabler.fill-icon {
     fill: rgba($primary, 0.2);
   }
 
@@ -291,12 +273,7 @@
 
     .mat-mdc-icon-button[disabled][disabled] {
       --mdc-icon-button-icon-color: rgba(255, 255, 255, 0.5) !important;
-      --mdc-icon-button-disabled-icon-color: rgba(
-        255,
-        255,
-        255,
-        0.5
-      ) !important;
+      --mdc-icon-button-disabled-icon-color: rgba(255, 255, 255, 0.5) !important;
     }
   }
 }
@@ -334,13 +311,11 @@ html.dark-theme {
     }
   }
 
-  .mdc-text-field:not(.mdc-text-field--disabled)
-    .mdc-text-field__input::placeholder,
+  .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder,
   .mdc-text-field__input::placeholder,
   .mat-mdc-tab .mdc-tab__text-label,
   .mat-mdc-tab-link .mdc-tab__text-label,
-  .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled)
-    .mdc-evolution-chip__text-label,
+  .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) .mdc-evolution-chip__text-label,
   .mat-mdc-checkbox-disabled label {
     color: rgba(255, 255, 255, 0.6) !important;
   }
@@ -423,9 +398,7 @@ html.dark-theme {
     border: solid 1px $darkborderColor;
   }
 
-  .mat-button-toggle-group-appearance-standard
-    .mat-button-toggle
-    + .mat-button-toggle {
+  .mat-button-toggle-group-appearance-standard .mat-button-toggle + .mat-button-toggle {
     border-left: solid 1px $darkborderColor;
   }
 
@@ -441,11 +414,5 @@ html.dark-theme {
     }
   }
 
-  @include syntax-colors(
-    $primary: $primary,
-    $accent: $accent,
-    $success: $success,
-    $warning: $warning,
-    $error: $error
-  );
+  @include syntax-colors($primary: $primary, $accent: $accent, $success: $success, $warning: $warning, $error: $error);
 }

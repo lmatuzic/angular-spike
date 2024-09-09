@@ -20,7 +20,7 @@ $mat-secondary: (
 );
 
 $mat-warn: (
-  100: #FDEDE8,
+  100: #fdede8,
   500: #fa896b,
   700: #f3704d,
   contrast: (
@@ -43,7 +43,7 @@ $bluetheme: mat.m2-define-light-theme(
     ),
     typography:
       mat.m2-define-typography-config(
-        $font-family: "Plus Jakarta Sans",
+        $font-family: 'Plus Jakarta Sans',
         $subtitle-2: mat.m2-define-typography-level(14px, 14px, 400),
         $subtitle-1: mat.m2-define-typography-level(21px, 26px, 500),
         $headline-6: mat.m2-define-typography-level(18px, 26px, 600),
@@ -64,7 +64,7 @@ $darkbluetheme: mat.m2-define-dark-theme(
     ),
     typography:
       mat.m2-define-typography-config(
-        $font-family: "Plus Jakarta Sans",
+        $font-family: 'Plus Jakarta Sans',
         $subtitle-2: mat.m2-define-typography-level(14px, 14px, 400),
         $subtitle-1: mat.m2-define-typography-level(21px, 26px, 500),
         $headline-6: mat.m2-define-typography-level(18px, 26px, 600),
@@ -84,10 +84,7 @@ $darkbluetheme: mat.m2-define-dark-theme(
 .horizontal-navbar .parentBox.pactive > a.primary:hover:before,
 .horizontal-navbar .parentBox > a.primary:hover:before,
 .horizontal-navbar .parentBox.pactive:hover > a.primary:before {
-  background-color: rgba(
-    mat.m2-get-color-from-palette($theme-primary, 500),
-    0.1
-  ) !important;
+  background-color: rgba(mat.m2-get-color-from-palette($theme-primary, 500), 0.1) !important;
   width: 100% !important;
 }
 
@@ -102,10 +99,7 @@ $darkbluetheme: mat.m2-define-dark-theme(
 .horizontal-navbar .parentBox > a.accent:hover:before,
 .horizontal-navbar .parentBox.pactive > a.accent:hover:before,
 .horizontal-navbar .parentBox.pactive:hover > a.accent:before {
-  background-color: rgba(
-    mat.m2-get-color-from-palette($theme-accent, 500),
-    0.1
-  ) !important;
+  background-color: rgba(mat.m2-get-color-from-palette($theme-accent, 500), 0.1) !important;
   width: 100% !important;
 }
 
@@ -133,10 +127,7 @@ $darkbluetheme: mat.m2-define-dark-theme(
         }
 
         &:before {
-          background-color: rgba(
-            mat.m2-get-color-from-palette($theme-primary, 500),
-            0.1
-          );
+          background-color: rgba(mat.m2-get-color-from-palette($theme-primary, 500), 0.1);
         }
       }
       &.accent {
@@ -152,10 +143,7 @@ $darkbluetheme: mat.m2-define-dark-theme(
           }
         }
         &:before {
-          background-color: rgba(
-            mat.m2-get-color-from-palette($theme-accent, 500),
-            0.1
-          );
+          background-color: rgba(mat.m2-get-color-from-palette($theme-accent, 500), 0.1);
         }
       }
     }

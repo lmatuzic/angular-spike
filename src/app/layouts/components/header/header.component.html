@@ -1,24 +1,16 @@
 <mat-toolbar [className]="isHorizontal ? 'topbar horizontal-topbar' : 'topbar'">
-  @if(isHorizontal) {
-  <div class="d-none d-sm-flex">
-    <app-branding></app-branding>
-  </div>
+  @if (isHorizontal) {
+    <div class="d-none d-sm-flex">
+      <app-branding></app-branding>
+    </div>
 
-  <button
-    mat-icon-button
-    (click)="handleToggle()"
-    class="d-flex justify-content-center"
-  >
-    <i-tabler name="align-left" class="icon-20 d-flex" />
-  </button>
+    <button mat-icon-button (click)="handleToggle()" class="d-flex justify-content-center">
+      <i-tabler name="align-left" class="icon-20 d-flex" />
+    </button>
   } @else {
-  <button
-    mat-icon-button
-    (click)="handleToggle()"
-    class="d-flex justify-content-center"
-  >
-    <i-tabler name="align-left" class="icon-20 d-flex" />
-  </button>
+    <button mat-icon-button (click)="handleToggle()" class="d-flex justify-content-center">
+      <i-tabler name="align-left" class="icon-20 d-flex" />
+    </button>
   }
 
   <div class="d-none d-lg-flex">
@@ -31,19 +23,11 @@
 
   <span class="flex-1-auto"></span>
 
-  <button
-    mat-icon-button
-    (click)="toggleMobileFilterNav.emit()"
-    class="d-flex d-lg-none justify-content-center"
-  >
+  <button mat-icon-button (click)="toggleMobileFilterNav.emit()" class="d-flex d-lg-none justify-content-center">
     <i-tabler name="grid-dots" class="icon-20 d-flex" />
   </button>
 
-  <button
-    mat-stroked-button
-    class="d-none d-lg-flex"
-    (click)="openSearchDialog()"
-  >
+  <button mat-stroked-button class="d-none d-lg-flex" (click)="openSearchDialog()">
     <div class="d-flex align-items-center">
       <i-tabler name="search" class="icon-20 d-flex m-r-10" />
       Try to Searching...

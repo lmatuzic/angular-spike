@@ -1,4 +1,4 @@
-@use "sass:meta";
+@use 'sass:meta';
 
 @mixin syntax-colors($args...) {
   @each $name, $color in meta.keywords($args) {
@@ -27,7 +27,7 @@
   $light-success: $light-success,
   $light-warning: $light-warning,
   $light-primary: $light-primary,
-  $light-info: $light-info,
+  $light-info: $light-info
 );
 
 .fill-warning svg {

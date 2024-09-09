@@ -1,33 +1,33 @@
-import { quicklinks } from "./../components/header/constants";
-import { BreakpointObserver, MediaMatcher } from "@angular/cdk/layout";
-import { Component, ViewChild, ViewEncapsulation } from "@angular/core";
-import { Subscription } from "rxjs";
-import { MatSidenav, MatSidenavContent } from "@angular/material/sidenav";
-import { CoreService } from "src/app/services/core.service";
-import { AppSettings } from "src/app/config";
-import { filter } from "rxjs/operators";
-import { NavigationEnd, Router, RouterModule } from "@angular/router";
-import { navItems } from "../components/nav-item/constants";
-import { NavService } from "../../services/nav.service";
-import { MaterialModule } from "src/app/material.module";
-import { CommonModule } from "@angular/common";
-import { NgScrollbarModule } from "ngx-scrollbar";
-import { TablerIconsModule } from "angular-tabler-icons";
-import { AppBreadcrumbComponent } from "../components/breadcrumb/breadcrumb.component";
-import { HeaderComponent } from "../components/header/header.component";
-import { SidebarComponent } from "../components/sidebar/sidebar.component";
-import { AppNavItemComponent } from "../components/nav-item/nav-item.component";
-import { apps } from "./constants";
-import { MobileSidebarComponent } from "../components/mobile-sidebar/mobile-sidebar.component";
-import { CustomizerComponent } from "src/app/layouts/components/customizer/customizer.component";
+import {quicklinks} from './../components/header/constants';
+import {BreakpointObserver, MediaMatcher} from '@angular/cdk/layout';
+import {Component, ViewChild, ViewEncapsulation} from '@angular/core';
+import {Subscription} from 'rxjs';
+import {MatSidenav, MatSidenavContent} from '@angular/material/sidenav';
+import {CoreService} from 'src/app/services/core.service';
+import {AppSettings} from 'src/app/config';
+import {filter} from 'rxjs/operators';
+import {NavigationEnd, Router, RouterModule} from '@angular/router';
+import {navItems} from '../components/nav-item/constants';
+import {NavService} from '../../services/nav.service';
+import {MaterialModule} from 'src/app/material.module';
+import {CommonModule} from '@angular/common';
+import {NgScrollbarModule} from 'ngx-scrollbar';
+import {TablerIconsModule} from 'angular-tabler-icons';
+import {AppBreadcrumbComponent} from '../components/breadcrumb/breadcrumb.component';
+import {HeaderComponent} from '../components/header/header.component';
+import {SidebarComponent} from '../components/sidebar/sidebar.component';
+import {AppNavItemComponent} from '../components/nav-item/nav-item.component';
+import {apps} from './constants';
+import {MobileSidebarComponent} from '../components/mobile-sidebar/mobile-sidebar.component';
+import {CustomizerComponent} from 'src/app/layouts/components/customizer/customizer.component';
 
-const MOBILE_VIEW = "screen and (max-width: 768px)";
-const TABLET_VIEW = "screen and (min-width: 769px) and (max-width: 1024px)";
-const MONITOR_VIEW = "screen and (min-width: 1024px)";
-const BELOWMONITOR = "screen and (max-width: 1023px)";
+const MOBILE_VIEW = 'screen and (max-width: 768px)';
+const TABLET_VIEW = 'screen and (min-width: 769px) and (max-width: 1024px)';
+const MONITOR_VIEW = 'screen and (min-width: 1024px)';
+const BELOWMONITOR = 'screen and (max-width: 1023px)';
 
 @Component({
-  selector: "app-full",
+  selector: 'app-full',
   standalone: true,
   imports: [
     RouterModule,
@@ -43,16 +43,16 @@ const BELOWMONITOR = "screen and (max-width: 1023px)";
     MobileSidebarComponent,
     CustomizerComponent,
   ],
-  templateUrl: "./full.component.html",
+  templateUrl: './full.component.html',
   styleUrls: [],
   encapsulation: ViewEncapsulation.None,
 })
 export class FullComponent {
   navItems = navItems;
 
-  @ViewChild("leftsidenav") public sidenav!: MatSidenav;
+  @ViewChild('leftsidenav') public sidenav!: MatSidenav;
   resView = false;
-  @ViewChild("content", { static: true }) content!: MatSidenavContent;
+  @ViewChild('content', {static: true}) content!: MatSidenavContent;
   //get options from service
   options = this.coreService.getOptions();
   private layoutChangesSubscription = Subscription.EMPTY;
@@ -77,9 +77,9 @@ export class FullComponent {
     private mediaMatcher: MediaMatcher,
     private router: Router,
     private breakpointObserver: BreakpointObserver,
-    private navService: NavService
+    private navService: NavService,
   ) {
-    this.htmlElement = document.querySelector("html")!;
+    this.htmlElement = document.querySelector('html')!;
     this.layoutChangesSubscription = this.breakpointObserver
       .observe([MOBILE_VIEW, TABLET_VIEW, MONITOR_VIEW, BELOWMONITOR])
       .subscribe((state) => {
@@ -99,11 +99,9 @@ export class FullComponent {
     this.receiveOptions(this.options);
 
     // This is for scroll to top
-    this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe((e) => {
-        this.content.scrollTo({ top: 0 });
-      });
+    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe((e) => {
+      this.content.scrollTo({top: 0});
+    });
   }
 
   ngOnDestroy() {
@@ -136,12 +134,12 @@ export class FullComponent {
   }
 
   toggleDarkTheme(options: AppSettings) {
-    if (options.theme === "dark") {
-      this.htmlElement.classList.add("dark-theme");
-      this.htmlElement.classList.remove("light-theme");
+    if (options.theme === 'dark') {
+      this.htmlElement.classList.add('dark-theme');
+      this.htmlElement.classList.remove('light-theme');
     } else {
-      this.htmlElement.classList.remove("dark-theme");
-      this.htmlElement.classList.add("light-theme");
+      this.htmlElement.classList.remove('dark-theme');
+      this.htmlElement.classList.add('light-theme');
     }
   }
 }

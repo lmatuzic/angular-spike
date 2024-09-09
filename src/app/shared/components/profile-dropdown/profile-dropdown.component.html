@@ -1,17 +1,6 @@
-<button
-  mat-fab
-  extended
-  color="inherit"
-  [matMenuTriggerFor]="profileMenu"
-  aria-label="Notifications"
->
+<button mat-fab extended color="inherit" [matMenuTriggerFor]="profileMenu" aria-label="Notifications">
   <div class="d-flex align-items-center">
-    <img
-      src="/assets/images/profile/user5.jpg"
-      class="rounded-circle object-cover"
-      width="40"
-      alt="profile"
-    />
+    <img src="/assets/images/profile/user5.jpg" class="rounded-circle object-cover" width="40" alt="profile" />
 
     <div class="m-l-16 text-left d-none d-lg-flex">
       <div class="f-s-16">Mike Nielsen</div>
@@ -19,22 +8,13 @@
   </div>
 </button>
 
-<mat-menu
-  #profileMenu="matMenu"
-  xPosition="before"
-  class="topbar-dd cardWithShadow"
->
+<mat-menu #profileMenu="matMenu" xPosition="before" class="topbar-dd cardWithShadow">
   <ng-scrollbar class="position-relative" style="height: 490px">
     <div class="p-x-32 p-y-16">
       <h6 class="f-s-16 f-w-600 m-0 mat-subtitle-1">User Profile</h6>
 
       <div class="d-flex align-items-center p-b-24 b-b-1 m-t-16">
-        <img
-          src="/assets/images/profile/user5.jpg"
-          class="rounded-circle"
-          width="95"
-          alt="userProfile"
-        />
+        <img src="/assets/images/profile/user5.jpg" class="rounded-circle" width="95" alt="userProfile" />
 
         <div class="m-l-16">
           <h6 class="f-s-16 f-w-600 m-0 mat-subtitle-1">Mike Nielsen</h6>
@@ -49,42 +29,30 @@
     </div>
 
     <div class="p-x-32">
-      @for(profile of profiles; track profile) {
-      <a
-        class="p-y-16 text-decoration-none d-block text-hover-primary"
-        [routerLink]="[profile.link]"
-      >
-        <div class="d-flex align-items-center">
-          <span
-            class="text-{{ profile.color }} bg-light-{{
-              profile.color
-            }} icon-50 d-flex align-items-center justify-content-center shadow-none rounded"
-          >
-            <i-tabler [name]="profile.img" class="icon-20" />
-          </span>
-
-          <div class="m-l-16">
-            <h5
-              class="f-s-14 f-w-600 m-0 textprimary mat-subtitle-1 hover-text"
+      @for (profile of profiles; track profile) {
+        <a class="p-y-16 text-decoration-none d-block text-hover-primary" [routerLink]="[profile.link]">
+          <div class="d-flex align-items-center">
+            <span
+              class="text-{{ profile.color }} bg-light-{{
+                profile.color
+              }} icon-50 d-flex align-items-center justify-content-center shadow-none rounded"
             >
-              {{ profile.title }}
-            </h5>
-            <span class="mat-body-1">{{ profile.subtitle }}</span>
+              <i-tabler [name]="profile.img" class="icon-20" />
+            </span>
+
+            <div class="m-l-16">
+              <h5 class="f-s-14 f-w-600 m-0 textprimary mat-subtitle-1 hover-text">
+                {{ profile.title }}
+              </h5>
+              <span class="mat-body-1">{{ profile.subtitle }}</span>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
       }
     </div>
 
     <div class="p-y-12 p-x-32">
-      <button
-        [routerLink]="['/authentication/login']"
-        mat-flat-button
-        color="primary"
-        class="w-100"
-      >
-        Logout
-      </button>
+      <button [routerLink]="['/authentication/login']" mat-flat-button color="primary" class="w-100">Logout</button>
     </div>
   </ng-scrollbar>
 </mat-menu>

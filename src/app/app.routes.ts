@@ -1,6 +1,6 @@
-import { Routes } from '@angular/router';
-import { BlankComponent } from './layouts/blank/blank.component';
-import { FullComponent } from './layouts/full/full.component';
+import {Routes} from '@angular/router';
+import {BlankComponent} from './layouts/blank/blank.component';
+import {FullComponent} from './layouts/full/full.component';
 
 export const routes: Routes = [
   {
@@ -14,8 +14,7 @@ export const routes: Routes = [
       },
       {
         path: 'starter',
-        loadChildren: () =>
-          import('./pages/pages.routes').then((m) => m.PagesRoutes),
+        loadChildren: () => import('./pages/pages.routes').then((m) => m.PagesRoutes),
       },
     ],
   },
@@ -25,10 +24,7 @@ export const routes: Routes = [
     children: [
       {
         path: 'authentication',
-        loadChildren: () =>
-          import('./pages/authentication/authentication.routes').then(
-            (m) => m.AuthenticationRoutes
-          ),
+        loadChildren: () => import('./pages/authentication/authentication.routes').then((m) => m.AuthenticationRoutes),
       },
     ],
   },

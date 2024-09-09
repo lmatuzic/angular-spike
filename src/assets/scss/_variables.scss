@@ -1,14 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 // font
-$font-family: "Plus Jakarta Sans", sans-serif;
+$font-family: 'Plus Jakarta Sans', sans-serif;
 
 // light color variable
 $sidebarbg: white;
 $background: #f0f5f9;
 $cardbg: white;
 $toolbar: white;
-$cardshadow: rgb(145 158 171 / 30%) 0px 0px 2px 0px,
+$cardshadow:
+  rgb(145 158 171 / 30%) 0px 0px 2px 0px,
   rgb(145 158 171 / 12%) 0px 12px 24px -4px;
 $hoverBgColor: #f6f9fc;
 
@@ -17,7 +18,8 @@ $darksidebarbg: #111c2d;
 $darkbackground: #15263a;
 $darkcardbg: #111c2d;
 $darktoolbar: #111c2d;
-$darkcardshadow: rgba(145, 158, 171, 0.3) 0px 0px 2px 0px,
+$darkcardshadow:
+  rgba(145, 158, 171, 0.3) 0px 0px 2px 0px,
   rgba(145, 158, 171, 0.02) 0px 12px 24px -4px;
 $darkborderColor: #333f55;
 $darkformborderColor: #465670;

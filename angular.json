@@ -17,9 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": [
-              "bezier-easing"
-            ],
+            "allowedCommonJsDependencies": ["bezier-easing"],
             "outputPath": "dist/Spike",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -27,10 +25,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": [
-              "src/styles.scss",
-              "src/assets/scss/style.scss"
-            ],
+            "styles": ["src/styles.scss", "src/assets/scss/style.scss"],
             "scripts": []
           },
           "configurations": {

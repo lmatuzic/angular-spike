@@ -18,10 +18,6 @@
   border-width: 10px;
 }
 
-.mat-mdc-radio-button
-  .mdc-radio
-  .mdc-radio__native-control:enabled
-  + .mdc-radio__background
-  .mdc-radio__inner-circle {
+.mat-mdc-radio-button .mdc-radio .mdc-radio__native-control:enabled + .mdc-radio__background .mdc-radio__inner-circle {
   border-color: $white;
 }

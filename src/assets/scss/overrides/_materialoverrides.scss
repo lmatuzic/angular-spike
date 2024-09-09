@@ -5,9 +5,9 @@
 .light-theme .aqua_theme,
 .light-theme .cyan_theme,
 .dark-theme {
-  @import "./drawer";
-  @import "./checkbox";
-  @import "./radio";
+  @import './drawer';
+  @import './checkbox';
+  @import './radio';
 
   .topbar {
     background-color: $toolbar;
@@ -16,13 +16,13 @@
 
 .light-theme,
 .dark-theme {
-  @import "./buttons";
-  @import "./form";
-  @import "./card";
-  @import "./typography";
-  @import "./dropdown";
+  @import './buttons';
+  @import './form';
+  @import './card';
+  @import './typography';
+  @import './dropdown';
 }
 
-@import "./borderColor";
-@import "./table";
-@import "./list";
+@import './borderColor';
+@import './table';
+@import './list';

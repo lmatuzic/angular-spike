@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { MaterialModule } from '../../../material.module';
+import {Component} from '@angular/core';
+import {RouterModule} from '@angular/router';
+import {MaterialModule} from '../../../material.module';
 
 @Component({
   selector: 'app-error',

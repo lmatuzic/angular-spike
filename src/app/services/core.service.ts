@@ -1,9 +1,9 @@
-import { Injectable } from "@angular/core";
-import { BehaviorSubject, Observable } from "rxjs";
-import { AppSettings, defaults } from "../config";
+import {Injectable} from '@angular/core';
+import {BehaviorSubject, Observable} from 'rxjs';
+import {AppSettings, defaults} from '../config';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class CoreService {
   get notify(): Observable<Record<string, any>> {
@@ -29,6 +29,6 @@ export class CoreService {
 
   setLanguage(lang: string) {
     this.options.language = lang;
-    this.notify$.next({ lang });
+    this.notify$.next({lang});
   }
 }

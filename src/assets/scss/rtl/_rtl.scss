@@ -1,5 +1,4 @@
-[dir="rtl"] {
-
+[dir='rtl'] {
   // ------------------------------------------------------
   // header
   // ------------------------------------------------------
@@ -9,7 +8,9 @@
     transform: scaleX(-1);
   }
 
-  .mat-button-toggle-group-appearance-standard .mat-button-toggle-appearance-standard+.mat-button-toggle-appearance-standard {
+  .mat-button-toggle-group-appearance-standard
+    .mat-button-toggle-appearance-standard
+    + .mat-button-toggle-appearance-standard {
     border-right: 0 !important;
   }
 
@@ -45,7 +46,7 @@
     padding-right: 26px !important;
 
     &:before {
-      content: "";
+      content: '';
       right: -16px;
       left: unset;
       border-radius: 24px 0 0 24px;
@@ -75,7 +76,6 @@
 
   // minisidebar
   @media (min-width: 1024px) {
-
     // sidebar
     .sidebarNav {
       left: unset;
@@ -101,7 +101,6 @@
       }
 
       .sidebarNav {
-
         // sidebar
         .sidebar-list {
           .menu-list-item {

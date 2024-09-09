@@ -13,17 +13,12 @@
 
 .bg-gredient {
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     height: 100%;
     width: 100%;
     opacity: 0.3;
-    background: radial-gradient(
-        rgb(210, 241, 223),
-        rgb(211, 215, 250),
-        rgb(186, 216, 244)
-      )
-      0% 0% / 400% 400%;
+    background: radial-gradient(rgb(210, 241, 223), rgb(211, 215, 250), rgb(186, 216, 244)) 0% 0% / 400% 400%;
     animation: 15s ease 0s infinite normal none running gradient;
     z-index: -1;
   }
@@ -61,7 +56,7 @@
   position: relative;
   text-align: center;
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     width: 100px;
@@ -70,7 +65,7 @@
     background: $borderColor;
   }
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     right: 0;
     width: 100px;
@@ -114,7 +109,7 @@
 
 .shaper-wrapper {
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     left: -125px;
     bottom: -50px;
@@ -124,13 +119,13 @@
     background-color: $error;
   }
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     top: -65px;
     right: -60px;
     width: 304px;
     height: 315px;
-    background: url("../../images/backgrounds/shap-login.png");
+    background: url('../../images/backgrounds/shap-login.png');
   }
 }
 

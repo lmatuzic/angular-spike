@@ -1,7 +1,7 @@
-import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Language } from 'src/app/layouts/components/header/types';
-import { MaterialModule } from 'src/app/material.module';
+import {CommonModule} from '@angular/common';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Language} from 'src/app/layouts/components/header/types';
+import {MaterialModule} from 'src/app/material.module';
 
 @Component({
   selector: 'app-language-selector',
