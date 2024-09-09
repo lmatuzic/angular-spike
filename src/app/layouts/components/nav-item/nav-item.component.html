@@ -34,7 +34,9 @@
       mat-list-item
       (click)="onItemSelected(item)"
       [ngClass]="{
-        'mat-toolbar mat-primary activeMenu': item.route ? router.isActive(item.route, true) : false,
+        'mat-toolbar mat-primary activeMenu': item.route
+          ? router.isActive(item.route, true)
+          : false,
         expanded: expanded,
         disabled: item.disabled,
       }"
@@ -47,12 +49,16 @@
         <span class="arrow-icon" fxFlex>
           <span fxFlex></span>
 
-          <mat-icon [@indicatorRotate]="expanded ? 'expanded' : 'collapsed'"> expand_more </mat-icon>
+          <mat-icon [@indicatorRotate]="expanded ? 'expanded' : 'collapsed'">
+            expand_more
+          </mat-icon>
         </span>
       }
       @if (item.chip) {
         <span>
-          <span class="{{ item.chipClass }} p-x-8 p-y-4 item-chip f-w-500 rounded-pill ">{{ item.chipContent }}</span>
+          <span class="{{ item.chipClass }} p-x-8 p-y-4 item-chip f-w-500 rounded-pill ">{{
+            item.chipContent
+          }}</span>
         </span>
       }
     </a>
@@ -60,7 +66,11 @@
 
   <!-- external Link -->
   @if (!item.navCap && item.external) {
-    <mat-list-item onClick="window.open('//google.com')" class="menu-list-item {{ item.bgcolor }}" target="_blank">
+    <mat-list-item
+      onClick="window.open('//google.com')"
+      class="menu-list-item {{ item.bgcolor }}"
+      target="_blank"
+    >
       <i-tabler class="routeIcon" name="{{ item.iconName }}" matListItemIcon></i-tabler>
       <span class="hide-menu">{{ item.displayName | translate }}</span>
     </mat-list-item>
@@ -70,7 +80,8 @@
   @if (expanded) {
     <div>
       @for (child of item.children; track child) {
-        <app-nav-item [item]="child" (click)="onSubItemSelected(child)" [depth]="depth + 1"> </app-nav-item>
+        <app-nav-item [item]="child" (click)="onSubItemSelected(child)" [depth]="depth + 1">
+        </app-nav-item>
       }
     </div>
   }

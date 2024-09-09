@@ -33,7 +33,11 @@ $utilities: functions.map-collect(
   $property-class-prefix: map.get($utility, class);
 
   // Utility class maybe empty, (e.g. with position class)
-  $property-class-prefix-hyphen: if($property-class-prefix == '', $property-class-prefix, $property-class-prefix + '-');
+  $property-class-prefix-hyphen: if(
+    $property-class-prefix == '',
+    $property-class-prefix,
+    $property-class-prefix + '-'
+  );
 
   @each $class-modifier, $value in $values {
     .#{$property-class-prefix-hyphen + $class-modifier} {
@@ -57,7 +61,11 @@ $ltrutilities: functions.map-collect(spacing.$ltr);
   $property-class-prefix: map.get($utility, class);
 
   // Utility class maybe empty, (e.g. with position class)
-  $property-class-prefix-hyphen: if($property-class-prefix == '', $property-class-prefix, $property-class-prefix + '-');
+  $property-class-prefix-hyphen: if(
+    $property-class-prefix == '',
+    $property-class-prefix,
+    $property-class-prefix + '-'
+  );
 
   @each $class-modifier, $value in $values {
     [dir='ltr'] .#{$property-class-prefix-hyphen + $class-modifier} {
@@ -81,7 +89,11 @@ $rtlutilities: functions.map-collect(spacing.$rtl);
   $property-class-prefix: map.get($utility, class);
 
   // Utility class maybe empty, (e.g. with position class)
-  $property-class-prefix-hyphen: if($property-class-prefix == '', $property-class-prefix, $property-class-prefix + '-');
+  $property-class-prefix-hyphen: if(
+    $property-class-prefix == '',
+    $property-class-prefix,
+    $property-class-prefix + '-'
+  );
 
   @each $class-modifier, $value in $values {
     [dir='rtl'] .#{$property-class-prefix-hyphen + $class-modifier} {

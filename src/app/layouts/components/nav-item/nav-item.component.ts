@@ -1,4 +1,12 @@
-import {Component, HostBinding, Input, OnInit, OnChanges, Output, EventEmitter} from '@angular/core';
+import {
+  Component,
+  HostBinding,
+  Input,
+  OnInit,
+  OnChanges,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import {Router} from '@angular/router';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {TranslateModule} from '@ngx-translate/core';
@@ -12,7 +20,13 @@ import {NavItem} from './types';
 @Component({
   selector: 'app-nav-item',
   standalone: true,
-  imports: [TranslateModule, TablerIconsModule, MaterialModule, CommonModule, AppHorizontalNavItemComponent],
+  imports: [
+    TranslateModule,
+    TablerIconsModule,
+    MaterialModule,
+    CommonModule,
+    AppHorizontalNavItemComponent,
+  ],
   templateUrl: './nav-item.component.html',
   styleUrls: [],
   animations: [

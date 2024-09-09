@@ -13,8 +13,12 @@
           </h4>
 
           <ul class="d-flex align-items-center">
-            @for (url of pageInfo?.['urls']; track url.url; let index = $index,last =
-        $last) {
+            @for (
+              url of pageInfo?.['urls'];
+              track url.url;
+              let index = $index,last =
+        $last
+            ) {
               @if (!last) {
                 <li class="breadcrumb-item" [routerLink]="url.url">
                   <a [routerLink]="url.url" class="text-primary">{{ url.title }}</a>

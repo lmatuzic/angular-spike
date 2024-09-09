@@ -5,12 +5,12 @@ import {MatListModule} from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
-import {TablerIconsModule} from 'angular-tabler-icons';
 import {NavService} from 'src/app/services/nav.service';
 import {MediaMatcher} from '@angular/cdk/layout';
 import {AppHorizontalNavItemComponent} from '../horizontal-nav-item/horizontal-nav-item.component';
 import {AppNavItemComponent} from '../nav-item/nav-item.component';
 import {BrandingComponent} from 'src/app/shared/components/branding/branding.component';
+import {MaterialModule} from 'src/app/material.module';
 
 @Component({
   selector: 'app-sidebar',
@@ -22,7 +22,7 @@ import {BrandingComponent} from 'src/app/shared/components/branding/branding.com
     MatExpansionModule,
     MatMenuModule,
     MatButtonModule,
-    TablerIconsModule,
+    MaterialModule,
     AppHorizontalNavItemComponent,
     AppNavItemComponent,
     BrandingComponent,

@@ -1,4 +1,11 @@
-import {Component, Output, EventEmitter, ViewEncapsulation, ChangeDetectionStrategy, signal} from '@angular/core';
+import {
+  Component,
+  Output,
+  EventEmitter,
+  ViewEncapsulation,
+  ChangeDetectionStrategy,
+  signal,
+} from '@angular/core';
 import {AppSettings} from 'src/app/config';
 import {CoreService} from 'src/app/services/core.service';
 import {BrandingComponent} from '../../../shared/components/branding/branding.component';
@@ -11,7 +18,14 @@ import {NgScrollbarModule} from 'ngx-scrollbar';
 @Component({
   selector: 'app-customizer',
   standalone: true,
-  imports: [BrandingComponent, TablerIconsModule, MaterialModule, FormsModule, NgScrollbarModule, NgIf],
+  imports: [
+    BrandingComponent,
+    TablerIconsModule,
+    MaterialModule,
+    FormsModule,
+    NgScrollbarModule,
+    NgIf,
+  ],
   templateUrl: './customizer.component.html',
   styleUrls: ['./customizer.component.scss'],
   encapsulation: ViewEncapsulation.None,

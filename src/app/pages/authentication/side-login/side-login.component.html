@@ -17,7 +17,11 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="align-items-center justify-content-center d-none d-lg-flex">
-                <img src="/assets/images/backgrounds/login3-bg.png" alt="login" style="max-width: 500px" />
+                <img
+                  src="/assets/images/backgrounds/login3-bg.png"
+                  alt="login"
+                  style="max-width: 500px"
+                />
               </div>
             </div>
             <div class="col-lg-6">
@@ -31,7 +35,12 @@
                       <div class="col-12 col-sm-6">
                         <button mat-stroked-button class="w-100 m-b-4">
                           <div class="d-flex align-items-center">
-                            <img src="/assets/images/svgs/google-icon.svg" alt="google" width="16" class="m-r-8" />
+                            <img
+                              src="/assets/images/svgs/google-icon.svg"
+                              alt="google"
+                              width="16"
+                              class="m-r-8"
+                            />
                             Sign in with Google
                           </div>
                         </button>
@@ -39,7 +48,12 @@
                       <div class="col-12 col-sm-6">
                         <button mat-stroked-button class="w-100 d-flex align-items-center m-b-4">
                           <div class="d-flex align-items-center">
-                            <img src="/assets/images/svgs/facebook-icon.svg" alt="facebook" width="40" class="m-r-4" />
+                            <img
+                              src="/assets/images/svgs/facebook-icon.svg"
+                              alt="facebook"
+                              width="40"
+                              class="m-r-4"
+                            />
                             Sign in with FB
                           </div>
                         </button>
@@ -49,7 +63,9 @@
                     <div class="or-border m-t-30">or sign in with</div>
 
                     <form class="m-t-30" [formGroup]="form" (ngSubmit)="submit()">
-                      <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">Username</mat-label>
+                      <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+                        >Username</mat-label
+                      >
                       <mat-form-field appearance="outline" class="w-100" color="primary">
                         <input matInput formControlName="uname" />
                         @if (f['uname'].touched && f['uname'].invalid) {
@@ -65,7 +81,9 @@
                       </mat-form-field>
 
                       <!-- password -->
-                      <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">Password</mat-label>
+                      <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+                        >Password</mat-label
+                      >
                       <mat-form-field appearance="outline" class="w-100" color="primary">
                         <input matInput type="password" formControlName="password" />
                         @if (f['password'].touched && f['password'].invalid) {
@@ -85,7 +103,14 @@
                           >Forgot Password ?</a
                         >
                       </div>
-                      <button mat-flat-button color="primary" class="w-100" [disabled]="!form.valid">Sign In</button>
+                      <button
+                        mat-flat-button
+                        color="primary"
+                        class="w-100"
+                        [disabled]="!form.valid"
+                      >
+                        Sign In
+                      </button>
                       <!-- input -->
                     </form>
                     <span class="d-block f-w-500 d-block m-t-24"

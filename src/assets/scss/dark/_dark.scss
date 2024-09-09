@@ -21,8 +21,14 @@
 
   .sidebar-list.mdc-list .expanded-items .menu-list-item:hover .mdc-list-item__primary-text,
   .sidebar-list.mdc-list .expanded-items .menu-list-item:hover .mat-mdc-list-item-icon,
-  .sidebar-list.mdc-list .expanded-items .menu-list-item.activeMenu.expanded .mdc-list-item__primary-text,
-  .sidebar-list.mdc-list .expanded-items .menu-list-item.activeMenu.expanded .mat-mdc-list-item-icon {
+  .sidebar-list.mdc-list
+    .expanded-items
+    .menu-list-item.activeMenu.expanded
+    .mdc-list-item__primary-text,
+  .sidebar-list.mdc-list
+    .expanded-items
+    .menu-list-item.activeMenu.expanded
+    .mat-mdc-list-item-icon {
     color: $textPrimary !important;
   }
 
@@ -227,7 +233,9 @@
   }
 
   // fill
-  .customizer-button-group .mat-button-toggle-appearance-standard.mat-button-toggle-checked i-tabler.fill-icon {
+  .customizer-button-group
+    .mat-button-toggle-appearance-standard.mat-button-toggle-checked
+    i-tabler.fill-icon {
     fill: rgba($primary, 0.2);
   }
 
@@ -414,5 +422,11 @@ html.dark-theme {
     }
   }
 
-  @include syntax-colors($primary: $primary, $accent: $accent, $success: $success, $warning: $warning, $error: $error);
+  @include syntax-colors(
+    $primary: $primary,
+    $accent: $accent,
+    $success: $success,
+    $warning: $warning,
+    $error: $error
+  );
 }

@@ -1,5 +1,7 @@
 <button mat-button [matMenuTriggerFor]="appsmenu" aria-label="Notifications">
-  <div class="d-flex align-items-center">Apps <i-tabler name="chevron-down" class="icon-16 m-l-4" /></div>
+  <div class="d-flex align-items-center">
+    Apps <mat-icon class="icon-16 m-l-4">keyboard_arrow_down</mat-icon>
+  </div>
 </button>
 
 <mat-menu #appsmenu="matMenu" class="apps-dd cardWithShadow">
@@ -9,7 +11,10 @@
         <div class="row">
           @for (app of apps; track app.title) {
             <div class="col-sm-6 text-hover-primary">
-              <a [routerLink]="[app.link]" class="d-flex align-items-center text-decoration-none m-b-24">
+              <a
+                [routerLink]="[app.link]"
+                class="d-flex align-items-center text-decoration-none m-b-24"
+              >
                 <span
                   class="text-primary bg-light-primary rounded icon-40 d-flex align-items-center justify-content-center"
                 >
@@ -30,7 +35,7 @@
 
       <div class="b-t-1 p-24 d-none d-lg-flex align-items-center justify-content-between">
         <span class="d-flex align-items-center mat-subtitle-1 f-s-16 f-w-500">
-          <i-tabler name="help" class="icon-20 m-r-8" />
+          <mat-icon class="icon-20 m-r-8">help</mat-icon>
           Frequently Asked Questions
         </span>
 

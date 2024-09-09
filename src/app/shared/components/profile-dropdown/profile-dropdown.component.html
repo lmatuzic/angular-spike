@@ -1,6 +1,17 @@
-<button mat-fab extended color="inherit" [matMenuTriggerFor]="profileMenu" aria-label="Notifications">
+<button
+  mat-fab
+  extended
+  color="inherit"
+  [matMenuTriggerFor]="profileMenu"
+  aria-label="Notifications"
+>
   <div class="d-flex align-items-center">
-    <img src="/assets/images/profile/user5.jpg" class="rounded-circle object-cover" width="40" alt="profile" />
+    <img
+      src="/assets/images/profile/user5.jpg"
+      class="rounded-circle object-cover"
+      width="40"
+      alt="profile"
+    />
 
     <div class="m-l-16 text-left d-none d-lg-flex">
       <div class="f-s-16">Mike Nielsen</div>
@@ -14,14 +25,19 @@
       <h6 class="f-s-16 f-w-600 m-0 mat-subtitle-1">User Profile</h6>
 
       <div class="d-flex align-items-center p-b-24 b-b-1 m-t-16">
-        <img src="/assets/images/profile/user5.jpg" class="rounded-circle" width="95" alt="userProfile" />
+        <img
+          src="/assets/images/profile/user5.jpg"
+          class="rounded-circle"
+          width="95"
+          alt="userProfile"
+        />
 
         <div class="m-l-16">
           <h6 class="f-s-16 f-w-600 m-0 mat-subtitle-1">Mike Nielsen</h6>
           <span class="f-s-14 mat-body-1 d-block m-b-4">Admin</span>
 
           <span class="d-flex align-items-center">
-            <i-tabler name="mail" class="icon-15 m-r-4" />
+            <mat-icon class="icon-15 m-r-4">mail</mat-icon>
             info&#64;spike.com
           </span>
         </div>
@@ -30,7 +46,10 @@
 
     <div class="p-x-32">
       @for (profile of profiles; track profile) {
-        <a class="p-y-16 text-decoration-none d-block text-hover-primary" [routerLink]="[profile.link]">
+        <a
+          class="p-y-16 text-decoration-none d-block text-hover-primary"
+          [routerLink]="[profile.link]"
+        >
           <div class="d-flex align-items-center">
             <span
               class="text-{{ profile.color }} bg-light-{{
@@ -52,7 +71,14 @@
     </div>
 
     <div class="p-y-12 p-x-32">
-      <button [routerLink]="['/authentication/login']" mat-flat-button color="primary" class="w-100">Logout</button>
+      <button
+        [routerLink]="['/authentication/login']"
+        mat-flat-button
+        color="primary"
+        class="w-100"
+      >
+        Logout
+      </button>
     </div>
   </ng-scrollbar>
 </mat-menu>
