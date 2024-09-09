@@ -26,9 +26,12 @@
   <mat-sidenav
     #leftsidenav
     position="start"
-    [mode]="isOver ? 'over' : 'side'"
+    [mode]="isMobileScreenResolution ? 'over' : 'side'"
     [opened]="
-      options.navPos === 'side' && options.sidenavOpened && !isOver && !resView
+      options.navPos === 'side' &&
+      options.sidenavOpened &&
+      !isMobileScreenResolution &&
+      !resView
     "
     (openedChange)="onSidenavOpenedChange($event)"
     (closedStart)="onSidenavClosedStart()"
@@ -37,7 +40,7 @@
     <div class="flex-layout">
       <app-sidebar
         (toggleMobileNav)="sidenav.toggle()"
-        [showToggle]="isOver"
+        [showToggle]="isMobileScreenResolution"
         [isHorizontal]="options.horizontal"
       />
 
@@ -145,7 +148,7 @@
     @if(options.horizontal) {
     <app-header
       [isHorizontal]="options.horizontal"
-      (toggleMobileNav)="sidenav.toggle()"
+      (toggleMobileNav)="leftsidenav.toggle()"
       (toggleMobileFilterNav)="filterNavRight.toggle()"
     />
 
@@ -163,7 +166,7 @@
       <!-- ============================================================== -->
       @if(!options.horizontal) {
       <app-header
-        [showToggle]="!isOver"
+        [showToggle]="!isMobileScreenResolution"
         [isHorizontal]="options.horizontal"
         (toggleCollapsed)="toggleCollapsed()"
         (toggleMobileNav)="sidenav.toggle()"

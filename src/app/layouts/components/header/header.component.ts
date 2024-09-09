@@ -118,7 +118,9 @@ export class HeaderComponent {
   }
 
   handleToggle() {
-    if (this.showToggle) {
+    if (this.isHorizontal) {
+      this.toggleMobileNav.emit();
+    } else if (this.showToggle) {
       this.toggleCollapsed.emit();
     } else {
       this.toggleMobileNav.emit();

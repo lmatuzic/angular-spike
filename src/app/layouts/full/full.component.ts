@@ -50,6 +50,8 @@ const BELOWMONITOR = "screen and (max-width: 1023px)";
 export class FullComponent {
   navItems = navItems;
 
+  @ViewChild("leftsidenav") leftsidenav!: MatSidenav;
+
   @ViewChild("leftsidenav")
   public sidenav: MatSidenav;
   resView = false;
@@ -65,7 +67,7 @@ export class FullComponent {
   apps = apps;
   quicklinks = quicklinks;
 
-  get isOver(): boolean {
+  get isMobileScreenResolution(): boolean {
     return this.isMobileScreen;
   }
 
@@ -126,7 +128,7 @@ export class FullComponent {
   }
 
   onSidenavOpenedChange(isOpened: boolean) {
-    this.isCollapsedWidthFixed = !this.isOver;
+    this.isCollapsedWidthFixed = !this.isMobileScreenResolution;
     this.options.sidenavOpened = isOpened;
     this.coreService.setOptions(this.options);
   }
