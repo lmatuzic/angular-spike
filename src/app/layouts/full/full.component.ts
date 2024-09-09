@@ -50,10 +50,7 @@ const BELOWMONITOR = "screen and (max-width: 1023px)";
 export class FullComponent {
   navItems = navItems;
 
-  @ViewChild("leftsidenav") leftsidenav!: MatSidenav;
-
-  @ViewChild("leftsidenav")
-  public sidenav: MatSidenav;
+  @ViewChild("leftsidenav") public sidenav!: MatSidenav;
   resView = false;
   @ViewChild("content", { static: true }) content!: MatSidenavContent;
   //get options from service
