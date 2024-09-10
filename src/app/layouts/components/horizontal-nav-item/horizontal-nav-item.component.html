@@ -6,8 +6,10 @@
       activeMenu: item.route ? router.isActive(item.route, true) : false,
     }"
   >
-    <i-tabler class="routeIcon icon-18" name="{{ item.iconName }}"></i-tabler>
+    <mat-icon class="routeIcon icon-18">{{ item.iconName }}</mat-icon>
+
     {{ item.displayName | translate }}
+
     @if (item.children && item.children.length) {
       <span class="down-icon d-flex m-l-auto">
         <mat-icon> expand_more </mat-icon>

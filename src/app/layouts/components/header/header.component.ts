@@ -11,7 +11,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {RouterModule} from '@angular/router';
-import {TablerIconsModule} from 'angular-tabler-icons';
 import {NgScrollbarModule} from 'ngx-scrollbar';
 import {MaterialModule} from 'src/app/material.module';
 import {LanguageSelectorComponent} from 'src/app/shared/components/language-selector/language-selector.component';
@@ -30,7 +29,6 @@ import {ShortcutsDropdownComponent} from 'src/app/shared/components/shortcuts-dr
     RouterModule,
     CommonModule,
     NgScrollbarModule,
-    TablerIconsModule,
     MaterialModule,
     FormsModule,
     MatMenuModule,

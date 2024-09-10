@@ -1,16 +1,7 @@
-import {
-  Component,
-  HostBinding,
-  Input,
-  OnInit,
-  OnChanges,
-  Output,
-  EventEmitter,
-} from '@angular/core';
+import {Component, HostBinding, Input, OnChanges, Output, EventEmitter} from '@angular/core';
 import {Router} from '@angular/router';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {TranslateModule} from '@ngx-translate/core';
-import {TablerIconsModule} from 'angular-tabler-icons';
 import {MaterialModule} from 'src/app/material.module';
 import {CommonModule} from '@angular/common';
 import {NavService} from 'src/app/services/nav.service';
@@ -20,13 +11,7 @@ import {NavItem} from './types';
 @Component({
   selector: 'app-nav-item',
   standalone: true,
-  imports: [
-    TranslateModule,
-    TablerIconsModule,
-    MaterialModule,
-    CommonModule,
-    AppHorizontalNavItemComponent,
-  ],
+  imports: [TranslateModule, MaterialModule, CommonModule, AppHorizontalNavItemComponent],
   templateUrl: './nav-item.component.html',
   styleUrls: [],
   animations: [
@@ -63,7 +48,7 @@ export class AppNavItemComponent implements OnChanges {
     this.navService.currentUrl.subscribe((url: string) => {
       if (this.item.route && url) {
         // console.log(`Checking '/${this.item.route}' against '${url}'`);
-        this.expanded = url.indexOf(`/${this.item.route}`) === 0;
+        this.expanded = url.startsWith(`/${this.item.route}`);
         this.ariaExpanded = this.expanded;
         //console.log(`${this.item.route} is expanded: ${this.expanded}`);
       }
@@ -71,11 +56,11 @@ export class AppNavItemComponent implements OnChanges {
   }
 
   onItemSelected(item: NavItem) {
-    if (!item.children || !item.children.length) {
+    if (!item.children?.length) {
       this.router.navigate([item.route]);
     }
 
-    if (item.children && item.children.length) {
+    if (item.children?.length) {
       this.expanded = !this.expanded;
     }
 
@@ -93,7 +78,7 @@ export class AppNavItemComponent implements OnChanges {
   }
 
   onSubItemSelected(item: NavItem) {
-    if (!item.children || !item.children.length) {
+    if (!item.children?.length) {
       if (this.expanded && window.innerWidth < 1024) {
         this.notify.emit();
       }

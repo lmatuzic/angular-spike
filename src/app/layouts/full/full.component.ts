@@ -12,7 +12,6 @@ import {NavService} from '../../services/nav.service';
 import {MaterialModule} from 'src/app/material.module';
 import {CommonModule} from '@angular/common';
 import {NgScrollbarModule} from 'ngx-scrollbar';
-import {TablerIconsModule} from 'angular-tabler-icons';
 import {AppBreadcrumbComponent} from '../components/breadcrumb/breadcrumb.component';
 import {HeaderComponent} from '../components/header/header.component';
 import {SidebarComponent} from '../components/sidebar/sidebar.component';
@@ -35,7 +34,6 @@ const BELOWMONITOR = 'screen and (max-width: 1023px)';
     CommonModule,
     SidebarComponent,
     NgScrollbarModule,
-    TablerIconsModule,
     HeaderComponent,
     SidebarComponent,
     AppBreadcrumbComponent,

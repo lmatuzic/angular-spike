@@ -16,14 +16,14 @@ export const navItems: NavItem[] = [
 
   {
     displayName: 'Disabled',
-    iconName: 'ban',
+    iconName: 'hide_source',
     route: '/disabled',
     bgcolor: 'accent',
     disabled: true,
   },
   {
     displayName: 'Chip',
-    iconName: 'mood-smile',
+    iconName: 'mood',
     bgcolor: 'warning',
     route: '/',
     chip: true,
@@ -32,7 +32,7 @@ export const navItems: NavItem[] = [
   },
   {
     displayName: 'Outlined',
-    iconName: 'mood-smile',
+    iconName: 'mood',
     bgcolor: 'success',
     route: '/',
     chip: true,

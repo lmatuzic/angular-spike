@@ -19,7 +19,7 @@ export const profiles: Profile[] = [
   },
   {
     id: 3,
-    img: 'credit-card',
+    img: 'credit_card',
     color: 'error',
     title: 'My Tasks',
     subtitle: 'To-do and Daily Tasks',
